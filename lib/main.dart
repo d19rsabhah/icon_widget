@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -74,10 +75,23 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
         ),
         body: Center(
-            child: Icon(
-          Icons.add_business_rounded,
-          size: 50,
-          color: Colors.amber,
+            child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.play_circle,
+              size: 50,
+              color: Colors.amber,
+            ),
+            SizedBox(
+              width: 11,
+            ),
+            FaIcon(
+              FontAwesomeIcons.amazon,
+              size: 45,
+              color: Colors.orangeAccent,
+            )
+          ],
         )));
   }
 }
